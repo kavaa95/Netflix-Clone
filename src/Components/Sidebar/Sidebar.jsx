@@ -11,7 +11,21 @@ import {
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import Logo from '../Logo';
+
 function SideBar() {
+  const Categories = [
+    { label: 'Categories', value: 'categories' },
+    { label: 'Popular', value: 'popular' },
+    { label: 'Top Rated', value: 'top_rated' },
+    { label: 'Upcoming', value: 'upcoming' },
+  ];
+  const Genres = [
+    { label: 'Genres', value: 'Genres' },
+    { label: 'Comedy', value: 'Comedy' },
+    { label: 'Action', value: 'Action' },
+    { label: 'Horror', value: 'Horror' },
+    { label: 'Animation', value: 'Animation' },
+  ];
   return (
     <div>
       <Toolbar>
@@ -19,26 +33,26 @@ function SideBar() {
       </Toolbar>
       <Divider />
       <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+        {Categories.map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
                 {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
               </ListItemIcon>
-              <ListItemText primary={text} />
+              <ListItemText primary={text.label} />
             </ListItemButton>
           </ListItem>
         ))}
       </List>
       <Divider />
       <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
+        {Genres.map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
                 {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
               </ListItemIcon>
-              <ListItemText primary={text} />
+              <ListItemText primary={text.label} />
             </ListItemButton>
           </ListItem>
         ))}

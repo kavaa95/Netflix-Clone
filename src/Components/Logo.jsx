@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box } from '@mui/material';
+import { Link } from 'react-router-dom';
 import SmLogo from './Assets/netflix.png';
 import LgLogo from './Assets/Netflix-logo-red-black.png';
 function Logo() {
@@ -10,14 +11,18 @@ function Logo() {
           display: { xs: 'block', sm: 'none', md: 'none' },
         }}
       >
-        <img src={SmLogo} style={{ height: '40px' }} alt="new" />
+        <Link to="/">
+          <img src={SmLogo} style={{ height: '40px' }} alt="new" />
+        </Link>
       </Box>
       <Box
         sx={{
           display: { xs: 'none', sm: 'block' },
         }}
       >
-        <img src={LgLogo} style={{ height: '40px' }} alt="new" />
+        <Link to="/">
+          <img src={LgLogo} style={{ height: '40px' }} alt="new" />
+        </Link>
       </Box>
     </div>
   );

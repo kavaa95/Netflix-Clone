@@ -32,7 +32,7 @@ function Navbar() {
             onClick={() => setMobileOpen(!mobileOpen)}
             sx={{ mr: 2, display: { sm: 'none' } }}
           >
-            <MenuIcon />
+            <MenuIcon size="large" />
           </IconButton>
           <Box
             sx={{
